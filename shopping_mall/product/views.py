@@ -11,10 +11,12 @@ class ProductList(ListView):
     model = Product
     template_name = 'product.html'
     # context_object_name = 'product_list'
+    
 class ProductCreate(FormView):
     template_name = 'register_product.html'
     form_class = RegisterForm
     success_url = '/product/'
+    
 class ProductDetail(DetailView):
     template_name = 'product_detail.html'
     queryset = Product.objects.all()
